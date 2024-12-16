@@ -1,6 +1,0 @@
----
-tags:
-  - Database
-  - SQL
----
----
