@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "knowledge-ecosystem",
+    pageTitle: "Enjoy, savor, and love debugging",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,17 +16,17 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "ko-KR",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "https://knowledge-ecosystem.pages.dev",
+    ignorePatterns: ["private", "**/private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: false,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Noto Sans Korean",
+        body: "Hahmlet",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
