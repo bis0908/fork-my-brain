@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "ko-KR",
-    baseUrl: "https://knowledge-ecosystem.pages.dev",
+    baseUrl: "knowledge-ecosystem.pages.dev",
     ignorePatterns: ["private", "**/private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: false,
