@@ -50,8 +50,6 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 - 기술: Node.js
 - 📺 [라이브 페이지](https://www.tantscola.com/)
 
----
-
 #### 비카누스 (2022.01 ~ 2022.11)
 ##### Fanuc 로봇 장비 3D 스캐닝 시스템 유지보수
 기술: React, Spring Boot, Redis, Docker, MySQL, Nginx
@@ -68,6 +66,8 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 - 국내외 장비 설치 및 교육, 트러블 슈팅
 - 인도, 말레이시아, 일본, 독일 등 해외 출장 경험
 - 국제 전시회 참가 (Achema Germany, InterPhex USA 등)
+
+
 #### 오엔테크놀러지 (2013.07 ~ 2015.04)
 ##### MHM / 엔지니어
 - 한국남부발전 Condition Maintenance Management System(CMMS) 구축
