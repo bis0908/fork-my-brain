@@ -1,5 +1,5 @@
 ---
-title: 소개
+title: this.소개
 tags:
   - resume
 ---
