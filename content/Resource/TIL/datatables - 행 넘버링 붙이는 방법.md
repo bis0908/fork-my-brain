@@ -8,10 +8,10 @@ tags:
 
 
 ```js
-
+// DataTable을 생성하는 코드 내부
 columns: [  
-  { data: null }, // target
-  // ...
+  { data: null }, // target (아래 drawCallback에서 생성)
+  // ... other columns
 ],
 drawCallback: function (settings) {  
   const api = this.api();  
