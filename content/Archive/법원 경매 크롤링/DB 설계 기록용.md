@@ -10,6 +10,7 @@ tags:
 ---
  
 |as-is|description|
+|----|
 |매각 기일|sale_date|
 |물건 비고|item_remark|
 |목록 소재지|list_location|
