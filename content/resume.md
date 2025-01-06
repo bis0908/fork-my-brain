@@ -37,7 +37,7 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 - 담당: 프론트엔드/백엔드 전체 개발
 - 📺 [라이브 페이지](https://seedconsulting.co.kr/)
 ##### [[Archive/체험단/메일 발송기/네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
-- 기술: Node.js, express, Nodemailer, MySQL
+- 기술: Node.js, express, Nodemailer, MySQL, HTML/CSS, Vanila JS/jQuery
 - 특징: 상위 노출 확률 기반 빅데이터 이메일 발송 시스템
 - 주요 기능: 캠페인 그룹 관리, 메일 템플릿 관리, 수신거부 기능, 메일 열람 통계
 - 🖥️[Front Git](https://github.com/bis0908/rena-client)
@@ -68,11 +68,12 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 - 국내외 장비 설치 및 교육, 트러블 슈팅
 - 인도, 말레이시아, 일본, 독일 등 해외 출장 경험
 - 국제 전시회 참가 (Achema Germany, InterPhex USA 등)
+
 > 장비 검사 퍼포먼스를 증강시키기 위해 하드웨어 구조 수정 제안을 하였고 
 > 이를 받아들여 전 출고 제품에 적용한 경험 있음.
 
 ### 오엔테크놀러지 (2013.07 ~ 2015.04)
-##### MHM / 엔지니어
+##### MHM(머신 상태 관리 디바이스) / 엔지니어
 - 한국남부발전 Condition Maintenance Management System(CMMS) 구축
 - 한국수력원자력 진동측정장비 납품 및 기술지원
 
