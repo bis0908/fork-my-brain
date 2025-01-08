@@ -39,7 +39,7 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 ##### [[Archive/체험단/메일 발송기/네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
 - 기술: Node.js, express, Nodemailer, MySQL, HTML/CSS, Vanila JS/jQuery
 - 특징: 상위 노출 확률 기반 빅데이터 이메일 발송 시스템
-- 주요 기능: 캠페인 그룹 관리, 메일 템플릿 관리, 수신거부 기능, 메일 열람 통계
+- 주요 기능: 캠페인 그룹 관리, 메일 템플릿 관리, 수신거부 기능, 메일 열람 통계 등
 - 🖥️[Front Git](https://github.com/bis0908/rena-client)
 - 🖥️[Server Git](https://github.com/bis0908/rena-server)
 ##### SFU 방식 WebRTC n:m 서버 기반 강의 시스템 경험
@@ -55,9 +55,17 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 ### 비카누스 (2022.01 ~ 2022.11)
 ##### Fanuc 로봇 장비 3D 스캐닝 시스템 유지보수
 기술: React, Spring Boot, Redis, Docker, MySQL, Nginx
+- React 기반 프론트엔드 개발
+- Spring Boot 기반 백엔드 API 개발
+- Redis를 활용한 캐시 시스템 구현
+- Docker 기반 컨테이너화 환경 구축
+- Nginx를 통한 웹서버 구성
 ##### DAQ 데이터 수집 및 시계열 데이터 적재 시스템 유지보수
 기술: React, Spring Boot, Message Broker, InfluxDB, Nginx
-
+- React를 활용한 대시보드 개발
+- Spring Boot 기반 데이터 처리 API 개발
+- Message Broker를 활용한 실시간 데이터 처리
+- InfluxDB를 활용한 시계열 데이터 관리
 ---
 
 ## 비개발 경력
