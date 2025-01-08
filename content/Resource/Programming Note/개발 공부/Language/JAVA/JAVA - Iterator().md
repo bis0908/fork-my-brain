@@ -2,17 +2,15 @@
 tags:
   - Java/basic
 ---
+---
+
 1. Iterator는 자바의 컬렉션 프레임웍에서 컬렉션에 저장되어 있는 요소들을 읽어오는 방법을 표준화 하였는데 그 중 하나가 Iterator이다.
 2. Iterator는 인터페이스다.
 ```java
 public interface Iterator {
-
-boolean hasNext();
-
-Object next();
-
-void remove();
-
+	boolean hasNext();
+	Object next();
+	void remove();
 }
 ```
 

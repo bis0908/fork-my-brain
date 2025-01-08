@@ -13,7 +13,7 @@ tags:
 ```
 - 전체 높이를 쉽게 구하기 위해 `.offset` 클래스로 감싸기
 
-```javascript
+```js
 $(window).on('scroll', function () {
 	const elementOffsetTop = $(".offset").offset().top;
 	const elementHeight = $(".offset").height();

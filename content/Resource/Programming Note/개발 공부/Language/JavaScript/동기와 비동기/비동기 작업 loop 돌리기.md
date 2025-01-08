@@ -5,6 +5,7 @@ tags:
 ---
 - `.forEach()` 는 비동기를 기다려주지 않는다.
 - `for await ...of`를 사용하면 된다.
+
 ```js
 const tableRow = $(".Ltbl_list_lvl0, .Ltbl_list_lvl1"); // cheerio Object
 

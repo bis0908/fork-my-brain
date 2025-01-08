@@ -21,9 +21,20 @@ tags:
                 1. 속성: 크기, 색상, 볼륨, 채널 등
                 2. 기능: 켜기/끄기, 볼륨 조절, 채널 변경하기 등
                 
-                ```java
-                class Tv {	String color;	boolean power;	int channel;	void power() {		power = !power;	}	void channelUp() {		channel++;	}	void channelDown() {		channel--;	}}
-                ```
+```java
+class Tv {	
+	String color;	boolean power;	int channel;	
+	void power() {
+		power = !power;	
+	}	
+	void channelUp() {
+		channel++;	
+	}	
+	void channelDown() {
+		channel--;	
+	}
+}
+```
                 
         
           
@@ -61,8 +72,12 @@ tags:
     
     1. 많은 수의 객체를 다뤄야할 때 배열을 사용하면 된다.
     
-    ```
-    // exampleTv[] tvArr = new Tv[3];// 객체 수가 많을 때는 반복문을 이용한다.Tv[] tvArr = new Tv[100];for (int i = 0; i < tvArr.length; i++) {	tvArr[i] = new Tv();}
+    ```java
+    // exampleTv[] tvArr = new Tv[3];
+    // 객체 수가 많을 때는 반복문을 이용한다.
+Tv[] tvArr = new Tv[100];for (int i = 0; i < tvArr.length; i++) {	
+	tvArr[i] = new Tv();
+}
     ```
     
 

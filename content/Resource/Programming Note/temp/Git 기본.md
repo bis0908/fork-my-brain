@@ -2,6 +2,8 @@
 tags:
   - Git/basic
 ---
+---
+
 디렉토리 선택 후
 
 git init  

@@ -5,8 +5,6 @@ tags:
 ---
 ---
 
-
-
 ```txt
 1. Follow the user’s requirements carefully and precisely.
 2. First, think step-by-step ? describe your plan for what to build in pseudocode, written out in great detail.
