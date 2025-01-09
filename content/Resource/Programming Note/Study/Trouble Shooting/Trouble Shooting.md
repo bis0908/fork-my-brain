@@ -2,7 +2,7 @@
 tags:
   - troubleshooting/links
 ---
-[[VMware This virtual machine appears to be in use 에러 해결 - JooTC]]
+[[VMware This virtual machine appears to be in use 에러 해결 - JooTC/VMware This virtual machine appears to be in use 에러 해결 - JooTC]]
 
 [[Error- identifier pcontext is undefined]]
 

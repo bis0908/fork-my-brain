@@ -10,7 +10,7 @@ tags:
 
 [[기타 자료 모음]]
 
-[[CentOS 8 dnf(yum) 저장소(repository) 설정(저장소 미러 고정추가삭제)]]
+[[CentOS 8 dnf(yum) 저장소(repository) 설정(저장소 미러 고정추가삭제)/CentOS 8 dnf(yum) 저장소(repository) 설정(저장소 미러 고정추가삭제)]]
 
 [[WSL2 - 기본 로그인 유저 지정]]
 

@@ -10,7 +10,7 @@ tags:
 
 [[node.js 기반 환경변수 사용하기]]
 
-[[nodejs 프로젝트 생성하는 법]]
+[[nodejs 프로젝트 생성하는 법/nodejs 프로젝트 생성하는 법]]
 
 [[jQuery npm 으로 설치하기]]
 
