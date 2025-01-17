@@ -33,7 +33,7 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 ### 프리랜서 (2022.12 ~ 현재)
 
 ##### 대학 입시 컨설팅 사이트 개발
-- 기술: Node.js, Nicepay, MySQL
+- 기술: Node.js, express, MySQL, HTML/CSS, Vanila JS/jQuery
 - 담당: 프론트엔드/백엔드 전체 개발
 - 📺 [라이브 페이지](https://seedconsulting.co.kr/)
 ##### [[Archive/체험단/메일 발송기/네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
