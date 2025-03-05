@@ -1,5 +1,0 @@
----
-title: ByteArrayOutputStream
-tags:
-  - Java
----

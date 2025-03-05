@@ -36,7 +36,7 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 - 기술: Node.js, express, MySQL, HTML/CSS, Vanila JS/jQuery
 - 담당: 프론트엔드/백엔드 전체 개발
 - 📺 [라이브 페이지](https://seedconsulting.co.kr/)
-##### [[Archive/체험단/메일 발송기/네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
+##### [[네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
 - 기술: Node.js, express, Nodemailer, MySQL, HTML/CSS, Vanila JS/jQuery
 - 특징: 상위 노출 확률 기반 빅데이터 이메일 발송 시스템
 - 주요 기능: 캠페인 그룹 관리, 메일 템플릿 관리, 수신거부 기능, 메일 열람 통계 등
