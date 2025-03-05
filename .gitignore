@@ -9,6 +9,7 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+.cursor
 
 # Created by https://www.toptal.com/developers/gitignore/api/obsidian,windows,linux,osx,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=obsidian,windows,linux,osx,node
