@@ -22,11 +22,9 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ### 기술 스택
 
-- Frontend:  Javascript, React
-- Backend: Node.js, Spring Boot, Express
-- Database: MySQL, Redis
-- DevOps: Docker, Nginx
-- Tools: Git, Socket.io, Nodemailer
+- Frontend:  Next.js
+- Backend: Node.js, Express
+- Database: RDB
 
 ---
 
@@ -42,7 +40,7 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ##### [[네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
 
-- 기술: Node.js, express, Nodemailer, MySQL, HTML/CSS, Vanila JS/jQuery
+- 기술: Node.js, Express, Nodemailer, MySQL, HTML/CSS, Vanila JS/jQuery
 - 특징: 상위 노출 확률 기반 빅데이터 이메일 발송 시스템
 - 주요 기능: 캠페인 그룹 관리, 메일 템플릿 관리, 수신거부 기능, 메일 열람 통계 등
 - 🖥️[Front Git](https://github.com/bis0908/rena-client)
@@ -86,26 +84,29 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ---
 
-## 비개발 경력
+# 비개발 경력
 
-### 엔클로니 (2016.06 ~ 2020.12)
+## 엔클로니 | 시스템 운영팀 대리 (2016.06 ~ 2020.12)
 
-#### 기술 엔지니어, 시스템 운영팀
+**정제/캡슐 외관 검사 장비 기술엔지니어**
 
-- 정제/캡슐 외관 검사 장비 납품 및 유지보수
-- 국내외 장비 설치 및 교육, 트러블 슈팅
-- 인도, 말레이시아, 일본, 독일 등 해외 출장 경험
-- 국제 전시회 참가 (Achema Germany, InterPhex USA 등)
+- 국내외 장비 납품 및 유지보수 (인도, 말레이시아, 일본, 독일 출장)
+- 장비 설치부터 고객사 인도까지 전 과정 관리 및 24/7 기술지원
+- 주요 전시회 참가 및 고객사 장비 데모 진행
 
-> 장비 검사 퍼포먼스를 증강시키기 위해 하드웨어 구조 수정 제안을 하였고
-> 이를 받아들여 전 출고 제품에 적용한 경험 있음.
+## ㈜오엔테크놀러지 | 필드 엔지니어 대리 (2013.07 ~ 2015.04)
 
-### 오엔테크놀러지 (2013.07 ~ 2015.04)
+**발전소 및 원자력 발전소 설비 관리 시스템 구축**
 
-#### MHM(머신 상태 관리 디바이스) / 엔지니어
+- 한국남부발전 삼척그린파워 CMMS 구축 및 AMS 소프트웨어 엔지니어링
+- 한국수력원자력 각 사업소 진동측정장비 납품 및 기술지원
 
-- 한국남부발전 Condition Maintenance Management System(CMMS) 구축
-- 한국수력원자력 진동측정장비 납품 및 기술지원
+## 서비스인 | 품질관리팀 사원 (2011.07 ~ 2013.06)
+
+**웹서비스 운영 및 품질관리**
+
+- SK 커뮤니케이션즈 싸이월드 Application QA
+- 네이트 메인 및 콘텐츠 사용자 통계 관리
 
 ---
 
