@@ -25,8 +25,17 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 #### Frontend
 
 - JS ES6
+- Next.js
 
 #### Backend
+
+- Node.js + Express
+
+#### DB & Cloud
+
+- Mysql
+- EC2
+- Supabase
 
 ---
 
