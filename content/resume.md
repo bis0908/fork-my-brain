@@ -29,10 +29,9 @@ tags:
 
 - Next.js
 - Express
-#### Database / BaaS
+#### Database
 
 - MySQL
-- Supabase
 #### Cloud
 
 - AWS EC2
