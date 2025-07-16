@@ -55,7 +55,8 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ####  임신한 아내를 위한 아기 성별 공개 축하 파티 사이트 구축
 
-- Cursor ai를 사용해 2일만에 사이트 구축
+- Cursor AI 활용으로 2일 내 빠른 프로토타이핑 및 배포 
+- 4종 젠더 리빌 애니메이션, 단태아/다태아 구분, 커스텀 카운트다운 기능 구현
 - Next.js, shadcn.ui, typescript
 - deploy: Vercel
 - 📺 [라이브페이지](https://gender-reveal-theta.vercel.app/)
@@ -68,9 +69,12 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ##### [[네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
 
-- 기술: Node.js, Express, Nodemailer, MySQL, HTML/CSS, Vanila JS/jQuery
-- 특징: 상위 노출 확률 기반 빅데이터 이메일 발송 시스템
-- 주요 기능: 캠페인 그룹 관리, 메일 템플릿 관리, 수신거부 기능, 메일 열람 통계 등
+- 시간당 1,200건 대량 메일 발송 시스템 구축
+- DB 폴링 기반 분산 처리로 중복 발송 방지 및 안정성 확보
+- 상위노출 확률 기반 빅데이터 이메일 발송 시스템 개발
+- 네이버 스팸 필터링 회피를 위한 3초 간격 순차 발송 로직 구현
+- 주요 기능: 캠페인 관리, 메일 템플릿 관리, 수신거부 시스템, 열람 통계
+- 기술: Node.js, Express, Nodemailer, MySQL, CloudType 다중 배포
 - 🖥️[Front Git](https://github.com/bis0908/rena-client)
 - 🖥️[Server Git](https://github.com/bis0908/rena-server)
 
@@ -86,6 +90,8 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ##### 수제 콜라 홍보용 랜딩 페이지 구축
 
+- 브랜드 스토리텔링 중심의 반응형 웹 디자인
+- 빠른 개발 사이클로 클라이언트 요구사항 신속 반영
 - 기술: Node.js
 - 📺 [라이브 페이지](https://www.tantscola.com/)
 
@@ -95,20 +101,17 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 기술: React, Spring Boot, Redis, Docker, MySQL, Nginx
 
-- React 기반 프론트엔드 개발
-- Spring Boot 기반 백엔드 API 개발
-- Redis를 활용한 캐시 시스템 구현
-- Docker 기반 컨테이너화 환경 구축
-- Nginx를 통한 웹서버 구성
+- 레거시 코드 분석을 통한 기능 개선 및 버그 수정
+- React, Spring Boot, Redis, Docker 기반 풀스택 환경 경험
+- 컨테이너화된 개발 환경에서의 협업 및 배포 경험
 
 ##### DAQ 데이터 수집 및 시계열 데이터 적재 시스템 유지보수
 
 기술: React, Spring Boot, Message Broker, InfluxDB, Nginx
 
-- React를 활용한 대시보드 개발
-- Spring Boot 기반 데이터 처리 API 개발
-- Message Broker를 활용한 실시간 데이터 처리
-- InfluxDB를 활용한 시계열 데이터 관리
+- 실시간 데이터 처리 파이프라인 안정성 개선
+- InfluxDB 기반 시계열 데이터 관리 및 React 대시보드 개발
+- Message Broker를 활용한 실시간 데이터 스트리밍 경험
 
 ---
 
