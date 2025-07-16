@@ -22,7 +22,6 @@ tags:
 #### Language
 
 - JavaScript (ES6+)
-- Python
 #### Runtime / Environment
 
 - Node.js
