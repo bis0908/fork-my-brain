@@ -43,9 +43,13 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ### 프리랜서 (2022.12 ~ 현재)
 
+#### 밸류앤플러스 (2025.05 ~ 2025.08)
+
 ####  임신한 아내를 위한 아기 성별 공개 축하 파티 사이트 구축
 
-- Next.js
+- Cursor ai를 사용해 2일만에 사이트 구축
+- Next.js, shadcn.ui, typescript
+- deply: Vercel
 - 📺 [라이브페이지](https://gender-reveal-theta.vercel.app/)
 
 #### 대학 입시 컨설팅 사이트 개발
