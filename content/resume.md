@@ -57,7 +57,7 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 - Cursor ai를 사용해 2일만에 사이트 구축
 - Next.js, shadcn.ui, typescript
-- deply: Vercel
+- deploy: Vercel
 - 📺 [라이브페이지](https://gender-reveal-theta.vercel.app/)
 
 #### 대학 입시 컨설팅 사이트 개발
@@ -81,7 +81,7 @@ Node.js 기반 개발자로, 다양한 웹/앱 서비스 개발 경험을 보유
 
 ##### 인천글로벌캠퍼스(IGC) 웹사이트 유지보수
 
-- 기술: Spring Boot(eGov), MySQL
+- 기술: Spring Boot, MySQL
 - 담당: 부분적 기능 유지보수
 
 ##### 수제 콜라 홍보용 랜딩 페이지 구축
