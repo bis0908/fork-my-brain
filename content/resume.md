@@ -57,14 +57,6 @@ tags:
 
 #### 프리랜서 이력 (최신순)
 
-##### 토이프로젝트: 임신한 아내를 위한 아기 성별 공개 축하 파티 사이트 구축
-
-- Cursor AI 활용으로 2일 내 빠른 프로토타이핑 및 배포 
-- 4종 젠더 리빌 애니메이션, 단태아/다태아 구분, 커스텀 카운트다운 기능 구현
-- Next.js, shadcn.ui, typescript
-- deploy: Vercel
-- 📺 [라이브페이지](https://gender-reveal-theta.vercel.app/)
-
 ##### 대학 입시 컨설팅 사이트 개발
 
 - 기술: Node.js, express, MySQL, HTML/CSS, Vanila JS/jQuery
@@ -123,6 +115,21 @@ tags:
 
 ---
 
+### 토이프로젝트
+
+#### 젠더 리빌 사이트
+
+> 임신 중인 부모가 가족, 친구들과 함께 아기의 성별을 공개하며 축하하는 행사로, 
+> 미국에서 유행하는 사회적 트렌드에서 착안하여 국내에서도 임신한 부부들을 축하하기 위해
+> 온라인으로 간편히 만들고 SNS로 공유할 수 있도록 제작하였습니다.
+
+- Cursor AI 활용으로 2일 내 빠른 프로토타이핑 및 배포 
+- 4종 젠더 리빌 애니메이션, 단태아/다태아 구분, 커스텀 카운트다운 기능 구현
+- Next.js, shadcn.ui, typescript
+- deploy: Vercel
+- 📺 [라이브페이지](https://gender-reveal-theta.vercel.app/)
+
+---
 # 비개발 경력
 
 ## 엔클로니 
