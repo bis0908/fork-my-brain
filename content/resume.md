@@ -19,11 +19,6 @@ tags:
 
 ### 기술 스택
 
-#### Language
-
-- JavaScript (ES6+)
-#### Runtime / Environment
-
 - Node.js
 #### Frameworks / Libraries
 
@@ -82,7 +77,7 @@ tags:
 ##### 인천글로벌캠퍼스(IGC) 웹사이트 유지보수
 
 - 기술: Spring Boot, MySQL
-- 담당: 부분적 기능 유지보수
+- 담당: 부분적 기능 유지보수 및 웹 접근성
 
 ##### 수제 콜라 홍보용 랜딩 페이지 구축
 
