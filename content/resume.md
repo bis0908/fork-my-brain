@@ -46,6 +46,7 @@ tags:
 ### 프리랜서 (2022.12 ~ 현재)
 
 ##### 밸류앤플러스 (2025.05 ~ 2025.08, 계약직)
+- 기술: Python, Node.js, Supabase
 
 **사내 비개발 직군 생산성 개선을 위한 N사 블로그 마케팅 자동화 도구 개발 및 플랫폼 구축**
 
@@ -68,11 +69,13 @@ tags:
 ##### [[네이버 인플루언서 마케팅 플랫폼 구축|네이버 인플루언서 마케팅 플랫폼 구축]]
 
 - 상위노출 확률 기반 빅데이터 이메일 발송 시스템 개발
-- 시간당 1,200건 메일 발송 시스템 구축
+- 시간당 1,200건 메일 발송 시스템 구축 (다중 서버 선형 확장 가능)
 - DB 폴링 기반 분산 처리로 중복 발송 방지 및 안정성 확보
-- 네이버 스팸 필터링 회피를 위한 딜레이 순차 발송 로직 구현
-- 주요 기능: 캠페인 관리, 메일 템플릿 관리, 수신거부 시스템, 열람 통계
-- 기술: Node.js, Express, Nodemailer, MySQL, cloud 서버 다중 배포
+- AWS ELB 기반 분산 크롤링 (병렬 처리로 약 3배 속도 향상)
+- Claude/Gemini API 연동 AI 마케팅 콘텐츠 자동 생성
+- 네이버 스팸 필터링 회피를 위한 딜레이 순차 발송 및 User Agent 로테이션
+- 주요 기능: 캠페인 관리, 메일 템플릿 관리, 수신거부 시스템, 열람 통계, AI 콘텐츠 생성
+- 기술: Node.js, Express, Nodemailer, MySQL, AWS ELB, Claude API, Socket.IO
 - 🖥️[Front Git](https://github.com/bis0908/rena-client)
 - 🖥️[Server Git](https://github.com/bis0908/rena-server)
 
