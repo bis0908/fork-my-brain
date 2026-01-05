@@ -332,7 +332,7 @@ graph TB
     Search -->|HTTP| N2
     Search -->|HTTP| BS1
 
-    Mail -->|SMTP:465| S1
+    Mail -->|SMTP:587| S1
     Mail -->|SMTP:587| S2
     Mail -->|SMTP:465| S3
     Mail -->|SMTP:465| S4
@@ -343,7 +343,7 @@ graph TB
 ### SMTP 동적 설정
 | 도메인 | 호스트 | 포트 | 보안 |
 |--------|--------|------|------|
-| gmail.com | smtp.gmail.com | 465 | TLS |
+| gmail.com | smtp.gmail.com | 587 | TLS |
 | naver.com | smtp.naver.com | 587 | STARTTLS |
 | daum.net | smtp.daum.net | 465 | TLS |
 | 기타 | smtps.hiworks.com | 465 | TLS |

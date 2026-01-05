@@ -99,7 +99,7 @@ flowchart TD
     B -->|daum.net| E[Daum SMTP]
     B -->|기타| F[Hiworks SMTP]
 
-    C --> G["smtp.gmail.com:465<br/>TLS"]
+    C --> G["smtp.gmail.com:587<br/>TLS"]
     D --> H["smtp.naver.com:587<br/>STARTTLS"]
     E --> I["smtp.daum.net:465<br/>TLS"]
     F --> J["smtps.hiworks.com:465<br/>TLS"]
@@ -110,7 +110,7 @@ flowchart TD
 graph TB
     subgraph Gmail["Gmail"]
         G1[호스트: smtp.gmail.com]
-        G2[포트: 465]
+        G2[포트: 587]
         G3[보안: TLS]
         G4[인증: 앱 비밀번호]
     end

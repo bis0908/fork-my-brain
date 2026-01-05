@@ -174,17 +174,17 @@ renamailer/
 │   ├── logger.js          # Winston 로깅
 │   └── config.env         # 환경 변수
 ├── routes/
-│   ├── authRouter.js      # 인증 라우터
-│   ├── crawlRouter.js     # 크롤링 라우터
+│   ├── auth-router.js     # 인증 라우터
+│   ├── crawl-router.js    # 크롤링 라우터
 │   ├── crawling.js        # 크롤링 보조
-│   ├── dbRouter.js        # DB 쿼리 라우터
-│   ├── mailRouter.js      # 메일 라우터
-│   └── vendorsRouter.js   # 벤더 라우터
+│   ├── db-router.js       # DB 쿼리 라우터
+│   ├── mail-router.js     # 메일 라우터
+│   └── vendors-router.js  # 벤더 라우터
 ├── models/
-│   ├── authService.js     # 인증 서비스
+│   ├── auth-service.js    # 인증 서비스
 │   ├── doSearchService.js # 크롤링 서비스
-│   ├── mailService.js     # 메일 서비스
-│   ├── queryService.js    # 쿼리 서비스
+│   ├── mail-service.js    # 메일 서비스
+│   ├── query-service.js   # 쿼리 서비스
 │   ├── socketService.js   # 소켓 서비스
 │   └── hiworksService.js  # 하이웍스 연동
 ├── views/                 # EJS 템플릿
