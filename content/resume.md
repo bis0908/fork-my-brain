@@ -25,16 +25,16 @@ tags:
 
 ## Technical Skills
 **언어 & 런타임**
-JavaScript (ES6+), Node.js 18+, Python 3
+JavaScript (ES6+), Node.js
 
 **프레임워크 & 라이브러리**
-Express, Next.js, React, mediasoup (WebRTC SFU)
+Express, Next.js, mediasoup (WebRTC SFU)
 
 **데이터베이스 & 인프라**
-MySQL, AWS (EC2/ELB), Docker, PM2
+MySQL, AWS EC2, PM2
 
 **개발 도구 & 협업**
-Git, GitHub Actions, Jest, Winston, Socket.IO, Supabase
+Git, Jest, Winston, Socket.IO, Supabase
 
 ---
 
