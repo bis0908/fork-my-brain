@@ -11,7 +11,7 @@ tags:
 ---
 
 ## Professional Summary
-**백엔드 중심 풀스택 엔지니어**로, 24/7 산업 시스템 운영 9 년 경험을 바탕으로 
+**백엔드 중심 풀스택 엔지니어**로, 24/7 산업 시스템 운영 9 년 경험을 바탕으로
 **설계 단계부터 장애 복구와 확장성을 고려**합니다.
 
 **핵심 강점**:
@@ -34,7 +34,7 @@ Express, Next.js, mediasoup (WebRTC SFU)
 MySQL, AWS EC2, PM2
 
 **개발 도구 & 협업**
-Git, Jest, Winston, Socket.IO, Supabase
+Git, Jest, Socket.IO, Supabase
 
 ---
 
@@ -146,9 +146,9 @@ flowchart TB
 - **도구**: mediasoup `getStats()` API, v8-profiler, chrome://webrtc-internals
 - **학습**: 단일 병목 가정의 위험성, 계층별 병목 분석 필요성
 
-**기술 스택**: Node.js, mediasoup v3, Socket.IO, Next.js, React, Fabric.js
+**기술 스택**: Node.js, mediasoup v3, Socket.IO, Next.js, Fabric.js
 
-**문서화**: Architecture, Socket Event Spec, Load Test Report, Troubleshooting 등 Wiki 6 개 문서 작성
+**문서화**: Architecture, Socket Event Spec, Load Test Report, Load Testing Tools 등 Wiki 6 개 문서 작성
 
 ---
 
