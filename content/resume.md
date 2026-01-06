@@ -94,7 +94,7 @@ Heartbeat + FOR UPDATE 락 기반 장애 허용 설계 → 서버 다운 시 락
 
 → 상세 내용: [[네이버 인플루언서 마케팅 플랫폼 구축]]
 
-**기술 스택**: Node.js, Express, MySQL, Puppeteer, AWS ELB, Nodemailer, Socket.IO, Claude API
+**기술 스택**: Node.js, Express, MySQL, Puppeteer, AWS ELB, Nodemailer, Socket.IO, LLM API
 
 ---
 
