@@ -103,6 +103,8 @@ Heartbeat + FOR UPDATE 락 기반 장애 허용 설계 → 서버 다운 시 락
 
 화상 채팅 + 실시간 화이트보드 + 화면 공유
 
+→ 상세 내용: [[WebRTC 실시간 협업 서비스]]
+
 #### 시스템 아키텍처
 ```mermaid
 flowchart TB
