@@ -283,7 +283,17 @@ for (let i = 0; i < producers.length; i += BATCH_SIZE) {
 
 ---
 
-## 6. 회고
+## 6. 상세 문서
+
+| 문서 | 설명 |
+|------|------|
+| [[docs/Architecture\|Architecture]] | 상세 아키텍처 설계 |
+| [[docs/Socket Event Specification\|Socket Event Specification]] | 이벤트 명세 |
+| [[docs/Load Test Report\|Load Test Report]] | 부하 테스트 결과 |
+
+---
+
+## 7. 회고
 
 ### 잘한 점
 
@@ -303,16 +313,6 @@ for (let i = 0; i < producers.length; i += BATCH_SIZE) {
 - **아키텍처 선택의 중요성**: P2P → SFU 전환만으로 25 배 확장성 확보
 - **성능 병목은 계층적**: 네트워크/CPU/메모리를 **독립적으로 분석**해야 진짜 원인 발견
 - **실시간 통신의 복잡성**: 시그널링/미디어 전송/상태 동기화를 모두 고려한 설계 필요
-
----
-
-## 7. 상세 문서
-
-| 문서 | 설명 |
-|------|------|
-| [[docs/Architecture\|Architecture]] | 상세 아키텍처 설계 |
-| [[docs/Socket Event Specification\|Socket Event Specification]] | 이벤트 명세 |
-| [[docs/Load Test Report\|Load Test Report]] | 부하 테스트 결과 |
 
 ---
 
