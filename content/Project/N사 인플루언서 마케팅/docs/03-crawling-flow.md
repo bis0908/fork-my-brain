@@ -153,7 +153,7 @@ flowchart LR
     A[블로그 ID 목록] --> B[getMemberId 호출]
     B --> C[DB 조회]
     C --> D{회원 존재?}
-    D -->|Yes| E["🦋 (닉네임) 추가"]
+    D -->|Yes| E[" (닉네임) 추가"]
     D -->|No| F[그대로 유지]
 ```
 

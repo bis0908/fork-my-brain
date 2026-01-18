@@ -34,7 +34,7 @@ AWS t3.small 환경에서 Mediasoup SFU 부하 테스트 결과.
 
 Loadero HTTPS 요구사항으로 **Cloudflare Tunnel** 사용 (UDP 미지원 → RTP over TCP).
 
-> ⚠️ 이 보고서의 Jitter 수치는 TCP fallback 영향을 받은 결과입니다.
+> ️ 이 보고서의 Jitter 수치는 TCP fallback 영향을 받은 결과입니다.
 > 상세 환경 구성은 [[Load Testing Tools]] 참조.
 
 ### 1.3 테스트 시나리오
