@@ -9,14 +9,13 @@ Create at: 2025-01-04
 ---
 
 # Socket Event Specification
-
 Socket.io 기반 시그널링 프로토콜 명세서.
-SFU(Mediasoup) 아키텍처 기반, 최대 100명 참가자 지원.
+
+SFU(Mediasoup) 아키텍처 기반, 최대 100 명 참가자 지원.
 
 ---
 
 ## 목차
-
 1. [방 관리 (Room)](#1-방-관리-room)
 2. [SFU 시그널링](#2-sfu-시그널링)
 3. [채팅 (Chat)](#3-채팅-chat)
@@ -27,9 +26,7 @@ SFU(Mediasoup) 아키텍처 기반, 최대 100명 참가자 지원.
 ---
 
 ## 1. 방 관리 (Room)
-
 ### 1.1 방 참가
-
 #### `room:join`
 **방향**: 클라이언트 → 서버
 
@@ -70,7 +67,6 @@ socket.emit("room:join", {
 ```
 
 ### 1.2 방 퇴장
-
 #### `room:leave`
 **방향**: 클라이언트 → 서버
 
@@ -89,7 +85,6 @@ socket.emit("room:leave", { roomId: "abc123" });
 ```
 
 ### 1.3 호스트 변경
-
 #### `room:host-changed` (브로드캐스트)
 **방향**: 서버 → 클라이언트 (방의 모든 참가자)
 
@@ -103,9 +98,7 @@ socket.emit("room:leave", { roomId: "abc123" });
 ---
 
 ## 2. SFU 시그널링
-
 ### 2.1 연결 수립 단계
-
 #### `sfu:get-router-rtp-capabilities`
 **방향**: 클라이언트 → 서버
 **목적**: Mediasoup Device 초기화에 필요한 코덱 정보 조회
@@ -129,7 +122,6 @@ socket.emit("sfu:get-router-rtp-capabilities", {
 ```
 
 ### 2.2 Transport 생성
-
 #### `sfu:create-send-transport`
 **방향**: 클라이언트 → 서버
 **목적**: 미디어 송신용 WebRTC Transport 생성
@@ -153,7 +145,7 @@ socket.emit("sfu:create-send-transport", {
 **방향**: 클라이언트 → 서버
 **목적**: 미디어 수신용 WebRTC Transport 생성
 
-```javascript
+```
 // 요청 및 응답 형식은 sfu:create-send-transport와 동일
 ```
 
@@ -173,7 +165,6 @@ socket.emit("sfu:connect-transport", {
 ```
 
 ### 2.3 미디어 송신 (Produce)
-
 #### `sfu:produce`
 **방향**: 클라이언트 → 서버
 **목적**: Producer 생성 (비디오/오디오 트랙 송신 시작)
@@ -221,7 +212,6 @@ socket.emit("sfu:produce", {
 **목적**: Producer 종료 (카메라 완전 끄기)
 
 ### 2.4 미디어 수신 (Consume)
-
 #### `sfu:get-producers`
 **방향**: 클라이언트 → 서버
 **목적**: 방의 다른 참가자들의 Producer 목록 조회
@@ -249,14 +239,12 @@ socket.emit("sfu:consume", {
 
 #### `sfu:resume-consumer`
 **방향**: 클라이언트 → 서버
-**목적**: Consumer 재개 (Consumer는 기본 일시정지 상태로 생성됨)
+**목적**: Consumer 재개 (Consumer 는 기본 일시정지 상태로 생성됨)
 
 ---
 
 ## 3. 채팅 (Chat)
-
 ### 3.1 메시지 전송
-
 #### `chat:message`
 **방향**: 클라이언트 ↔ 서버 (양방향)
 
@@ -279,9 +267,7 @@ socket.emit("chat:message", {
 ---
 
 ## 4. 화이트보드 (Whiteboard)
-
 ### 4.1 그리기 이벤트
-
 #### `whiteboard:event`
 **방향**: 클라이언트 ↔ 서버 (양방향)
 
@@ -295,34 +281,28 @@ socket.emit("whiteboard:event", {
 ```
 
 ### 4.2 스냅샷 요청
-
 #### `whiteboard:snapshot:request` / `whiteboard:snapshot:response`
-
 ### 4.3 캔버스 초기화
-
 #### `whiteboard:clear`
 **방향**: 클라이언트 → 서버 (호스트만 가능)
 
 ---
 
 ## 5. 에러 처리
-
 ### 5.1 에러 코드
-
 | 코드 | 설명 | 대응 방안 |
 |------|------|----------|
 | `ROOM_NOT_FOUND` | 존재하지 않는 방 | 방 재생성 또는 사용자에게 알림 |
-| `ROOM_FULL` | 방 정원(100명) 초과 | 사용자에게 알림 |
+| `ROOM_FULL` | 방 정원 (100 명) 초과 | 사용자에게 알림 |
 | `INVALID_NICKNAME` | 유효하지 않은 닉네임 | 닉네임 재입력 요청 |
-| `TRANSPORT_NOT_FOUND` | Transport가 존재하지 않음 | Transport 재생성 |
-| `PRODUCER_NOT_FOUND` | Producer가 존재하지 않음 | Producer 재생성 |
-| `CONSUMER_NOT_FOUND` | Consumer가 존재하지 않음 | Consumer 재생성 |
+| `TRANSPORT_NOT_FOUND` | Transport 가 존재하지 않음 | Transport 재생성 |
+| `PRODUCER_NOT_FOUND` | Producer 가 존재하지 않음 | Producer 재생성 |
+| `CONSUMER_NOT_FOUND` | Consumer 가 존재하지 않음 | Consumer 재생성 |
 | `INVALID_RTP_CAPABILITIES` | 지원하지 않는 코덱 | 클라이언트에 에러 표시 |
 | `ALREADY_PRODUCING` | 이미 해당 종류의 Producer 존재 | 기존 Producer 종료 후 재생성 |
 | `NOT_HOST` | 호스트 권한 필요 | 권한 에러 표시 |
 
 ### 5.2 에러 응답 형식
-
 ```javascript
 {
   error: "ERROR_CODE",
@@ -333,9 +313,7 @@ socket.emit("whiteboard:event", {
 ---
 
 ## 6. 시퀀스 다이어그램
-
 ### 6.1 방 참가 및 SFU 초기화
-
 ```mermaid
 sequenceDiagram
     participant C as Client
@@ -358,7 +336,6 @@ sequenceDiagram
 ```
 
 ### 6.2 미디어 송신 (Produce)
-
 ```mermaid
 sequenceDiagram
     participant C as Client
@@ -375,7 +352,6 @@ sequenceDiagram
 ```
 
 ### 6.3 미디어 수신 (Consume)
-
 ```mermaid
 sequenceDiagram
     participant C as Client
@@ -391,7 +367,6 @@ sequenceDiagram
 ```
 
 ### 6.4 방 퇴장
-
 ```mermaid
 sequenceDiagram
     participant C as Client
@@ -407,9 +382,7 @@ sequenceDiagram
 ---
 
 ## 7. 참고 사항
-
 ### 7.1 이벤트 접두사 규칙
-
 | 접두사 | 용도 |
 |--------|------|
 | `room:` | 방 관리 (입장, 퇴장, 호스트 변경) |
@@ -418,15 +391,15 @@ sequenceDiagram
 | `whiteboard:` | 화이트보드 |
 
 ### 7.2 P2P 시그널링 (제거됨)
-
 다음 이벤트들은 SFU 전환으로 제거됨:
-- `signal:offer` - SFU가 중계하므로 불필요
-- `signal:answer` - SFU가 중계하므로 불필요
-- `signal:ice-candidate` - Mediasoup Transport가 처리
+
+- `signal:offer` - SFU 가 중계하므로 불필요
+- `signal:answer` - SFU 가 중계하므로 불필요
+- `signal:ice-candidate` - Mediasoup Transport 가 처리
 
 ### 7.3 재연결 전략
-
 네트워크 불안정 시 재연결 순서:
+
 1. Socket.io 재연결 (자동)
 2. `sfu:get-router-rtp-capabilities` 재조회
 3. Transport 재생성 (`sfu:create-send/recv-transport`)

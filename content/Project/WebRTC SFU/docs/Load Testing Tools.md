@@ -9,23 +9,19 @@ Create at: 2025-01-04
 ---
 
 # Load Testing Tools
-
 WebRTC SFU 부하 테스트 환경 구성 가이드.
 
 ---
 
 ## 1. 테스트 도구 개요
-
 ### 1.1 사용 도구
-
 | 도구 | 역할 | 비고 |
 |------|------|------|
-| **Loadero** | 원격 WebRTC 부하 테스트 | SaaS (https://loadero.com) |
+| **Loadero** | 원격 WebRTC 부하 테스트 | SaaS (<https://loadero.com>) |
 | **RoomTrafficLogger** | 서버측 트래픽 로깅 | 커스텀 유틸리티 |
 | **CpuProfiler** | Node.js CPU 프로파일링 | v8-profiler-next 기반 |
 
 ### 1.2 테스트 구성도
-
 ```mermaid
 flowchart TB
     subgraph Loadero["Loadero Cloud"]
@@ -55,25 +51,21 @@ flowchart TB
 ---
 
 ## 2. Loadero
-
 ### 2.1 로컬 테스트의 한계
-
-프로젝트 초기에는 Puppeteer 기반 로컬 부하 테스트(`tests/load-test/`)를 시도했으나
+프로젝트 초기에는 Puppeteer 기반 로컬 부하 테스트 (`tests/load-test/`) 를 시도했으나
 
 - 클라이언트 수에 비례하여 Chrome 프로세스 급증
 - 테스트 장비의 메모리 부족으로 유의미한 수치 측정 불가
 
-→ 클라이언트 리소스 부하를 분산하기 위해 클라우드 SaaS(Loadero)로 전환.
+→ 클라이언트 리소스 부하를 분산하기 위해 클라우드 SaaS(Loadero) 로 전환.
 
 ### 2.2 선택 이유
-
-- **실제 브라우저 사용**: Headless Chrome으로 실제 WebRTC 연결
+- **실제 브라우저 사용**: Headless Chrome 으로 실제 WebRTC 연결
 - **지역 분산 테스트**: 여러 리전에서 동시 접속 시뮬레이션
 - **메트릭 수집**: WebRTC 내부 통계 (Jitter, RTT, 패킷 손실) 자동 수집
 - **녹화/스크린샷**: 테스트 세션 영상 기록 가능
 
 ### 2.3 테스트 시나리오 구성
-
 1. **Loadero 프로젝트 생성**
 2. **테스트 스크립트 작성** (JavaScript)
    - 방 URL 접속
@@ -84,8 +76,7 @@ flowchart TB
 4. **테스트 실행 및 결과 확인**
 
 ### 2.4 HTTPS 요구사항
-
-WebRTC `getUserMedia()` API는 **Secure Context (HTTPS)**에서만 동작합니다.
+WebRTC `getUserMedia()` API 는 **Secure Context (HTTPS)**에서만 동작합니다.
 
 **해결 방법**: Cloudflare Tunnel 사용
 
@@ -95,19 +86,17 @@ cloudflared tunnel --url http://localhost:3000
 ```
 
 **제약사항**:
-- Cloudflare Tunnel은 UDP 미지원
+- Cloudflare Tunnel 은 UDP 미지원
 - WebRTC 미디어가 **RTP over TCP**로 전송됨
 - UDP 대비 높은 지연과 Jitter 발생
 
 > 테스트 결과의 Jitter 수치는 TCP fallback 영향을 받습니다.
-> 프로덕션 환경(UDP 사용)에서는 더 나은 성능이 예상됩니다.
+> 프로덕션 환경 (UDP 사용) 에서는 더 나은 성능이 예상됩니다.
 
 ---
 
 ## 3. 서버측 모니터링 도구
-
 ### 3.1 RoomTrafficLogger
-
 방 단위 트래픽 세션을 로깅하는 커스텀 유틸리티.
 
 **수집 메트릭**:
@@ -119,7 +108,8 @@ cloudflared tunnel --url http://localhost:3000
 **로그 경로**: `./logs/traffic/traffic-YYYY-MM-DD.log`
 
 **출력 예시**:
-```
+
+```bash
 ========== 세션 종료: 2025-12-23T15:30:00+09:00 ==========
 방 ID: test-room
 세션 ID: sess-1703312400000-test-room
@@ -140,12 +130,11 @@ cloudflared tunnel --url http://localhost:3000
 ```
 
 ### 3.2 CpuProfiler
-
 v8-profiler-next 기반 Node.js CPU 프로파일링 도구.
 
 **기능**:
 - 세션 단위 CPU 프로파일 수집
-- Chrome DevTools에서 Flame Graph 분석 가능
+- Chrome DevTools 에서 Flame Graph 분석 가능
 
 **로그 경로**: `./logs/profile/cpu-*.cpuprofile`
 
@@ -153,14 +142,12 @@ v8-profiler-next 기반 Node.js CPU 프로파일링 도구.
 1. Chrome DevTools 열기 (F12)
 2. Performance 탭 → Load Profile 클릭
 3. `.cpuprofile` 파일 선택
-4. Flame Chart에서 병목 구간 분석
+4. Flame Chart 에서 병목 구간 분석
 
 ---
 
 ## 4. 테스트 실행 체크리스트
-
 ### 4.1 사전 준비
-
 ```bash
 # 1. 서버 시작
 npm run server:dev
@@ -173,17 +160,15 @@ cloudflared tunnel --url http://localhost:3000
 ```
 
 ### 4.2 모니터링 확인
-
 ```bash
 # 실시간 SFU 상태 확인
-curl http://localhost:3001/sfu/stats | jq .
+curl http://localhost:3005/sfu/stats | jq .
 
 # 헬스 체크
-curl http://localhost:3001/health
+curl http://localhost:3005/health
 ```
 
 ### 4.3 결과 수집
-
 ```bash
 # 트래픽 로그 확인
 cat ./logs/traffic/traffic-*.log
@@ -195,7 +180,6 @@ ls ./logs/profile/*.cpuprofile
 ---
 
 ## 5. 참고 자료
-
 - [Loadero 공식 문서](https://docs.loadero.com/)
 - [Cloudflare Tunnel 문서](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)
 - [Chrome DevTools Performance 분석](https://developer.chrome.com/docs/devtools/performance/)
