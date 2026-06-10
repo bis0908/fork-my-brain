@@ -92,7 +92,7 @@ graph TB
 const producer = await sendTransport.produce({
   track: screenTrack,
   appData: { 
-    isScreenShare: true,  // 구분 플래그
+    screenShare: true,  // 구분 플래그
     socketId: socket.id   // 소유자 식별
   }
 });
@@ -105,11 +105,11 @@ const producer = await sendTransport.produce({
 socket.emit('newProducer', {
   producerId: producer.id,
   kind: producer.kind,
-  isScreenShare: producer.appData.isScreenShare  // 클라이언트에 전달
+  screenShare: producer.appData.screenShare  // 클라이언트에 전달
 });
 
 // 클라이언트에서 별도 UI 렌더링
-if (isScreenShare) {
+if (screenShare) {
   renderScreenShareVideo(consumer);
 } else {
   renderCameraVideo(consumer);
@@ -174,6 +174,8 @@ function getNextWorker() {
 - 네트워크 대역폭 활용도 상승 (434Mbps → 650Mbps)
 - **학습**: 단일 병목 가정의 위험성, 계층별 병목 분석 필요성 (네트워크 → CPU → 메모리)
 
+> **구현 현황 메모 (2026-06 코드 검증)**: Worker 수는 `os.cpus().length`(prod) 기반이 맞으나, Worker 선택은 위 예시의 라운드로빈이 아니라 Router 수가 가장 적은 Worker 를 고르는 Least-Connection 방식으로 구현되어 있다(`getNextWorker`는 deprecated 라운드로빈 인덱스 대신 least-loaded 로직에 위임).
+
 ---
 
 ### 과제 3: Consumer N² 스케일링 문제
@@ -217,6 +219,8 @@ for (let i = 0; i < producers.length; i += BATCH_SIZE) {
 - 브라우저 프리징 현상 해소
 - 클라이언트 메모리 사용량 **30% 감소** (불필요한 Consumer 제거)
 - **학습**: SFU 의 확장성 한계, MCU(Multi-point Control Unit) 고려 필요
+
+> **구현 현황 메모 (2026-06 코드 검증)**: 위 'BATCH_SIZE=5 배치 병렬 구독'·'12 개 그리드 페이지네이션'·'화면 밖 Consumer 일시 중지(off-screen pause)'는 실제 코드에 미구현이다. 실제 구독은 순차 `for-await`이며, Consumer 는 paused 생성 후 즉시 전부 resume 된다(UI 는 9 명 초과 시 speaker view 전환, 페이지네이션 없음). 코드로 확인된 N² 완화 수단은 Simulcast 3 단계뿐이며, '5 초 → 1.2 초' 수치는 코드로 재현·검증되지 않음.
 
 ---
 

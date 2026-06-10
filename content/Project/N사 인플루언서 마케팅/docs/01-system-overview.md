@@ -27,7 +27,8 @@ title: 시스템 개요
 | Template | EJS |
 | Real-time | Socket.IO |
 | Email | Nodemailer |
-| Crawling | Axios, Cheerio, Puppeteer |
+| Crawling | Axios, Cheerio |
+| RPA (Hiworks 관리자 자동화) | Puppeteer |
 | Scheduling | node-schedule |
 | Build | Webpack |
 
