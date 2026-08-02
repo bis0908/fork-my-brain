@@ -30,7 +30,7 @@ AWS t3.small 환경에서 Mediasoup SFU 부하 테스트 결과.
 ### 1.2 테스트 환경 제약
 Loadero HTTPS 요구사항으로 **Cloudflare Tunnel** 사용 (UDP 미지원 → RTP over TCP).
 
-> ️ 이 보고서의 Jitter 수치는 TCP fallback 영향을 받은 결과입니다.
+>  이 보고서의 Jitter 수치는 TCP fallback 영향을 받은 결과입니다.
 > 상세 환경 구성은 [[Load Testing Tools]] 참조.
 
 ### 1.3 테스트 시나리오
@@ -77,7 +77,7 @@ Loadero HTTPS 요구사항으로 **Cloudflare Tunnel** 사용 (UDP 미지원 →
 | 수신 트래픽 | 434 Mbps | 1,272 Mbps | +193% |
 
 ### 3.2 이중 병목 (Dual Bottleneck) 구조
-**발견**: 참가자가 3 배 증가 (10→30 명) 했지만, Jitter 는 1.4 배만 증가
+**발견**: 참가자가 3 배 증가 (10 명 → 30 명) 했지만, Jitter 는 1.4 배만 증가
 
 **원인**:
 1. **Jitter 포화점 존재** - 약 2~3 초에서 포화됨
@@ -134,7 +134,7 @@ Loadero HTTPS 요구사항으로 **Cloudflare Tunnel** 사용 (UDP 미지원 →
 3. **TCP vs UDP**: 재전송 대기가 실시간 미디어에 치명적
 4. **데이터 기반 의사결정**: 추측 → 측정 → 분석
 
-> **서버 코드는 정상 작동하며, 하드웨어 한계가 주요 원인이었습니다.**
+> **서버 코드는 정상 작동, 하드웨어 한계가 주요 원인.**
 
 ---
 

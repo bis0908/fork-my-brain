@@ -19,7 +19,7 @@ Create at: 2025-01-04
 기존 P2P(Peer-to-Peer) 방식 화상 회의는 참가자가 늘어날수록 각 클라이언트가 모든 참가자에게 직접 연결해야 하므로:
 
 - **클라이언트 부하 폭증**: N 명 참가 시 각 클라이언트가 N-1 개 연결 유지 → CPU/대역폭 급증
-- **확장성 한계**: 실질적으로 4-5 명 이상에서 성능 저하 심각
+- **확장성 한계**: 실질적으로 4~5 명 이상에서 성능 저하 심각
 - **모바일 대응 불가**: 제한된 리소스의 모바일 기기에서 사용 불가능
 
 ### 솔루션
@@ -59,7 +59,7 @@ graph TB
 | 항목 | 선택 | 이유 |
 |------|------|------|
 | **미디어 서버** | Mediasoup SFU | Janus 대비 낮은 지연시간 (200ms 미만), 세밀한 제어 가능 |
-| **시그널링** | Socket.IO | WebSocket 기반 양방향 통신, 재연결 자동 처리 |
+| **시그널링** | Socket.io | WebSocket 기반 양방향 통신, 재연결 자동 처리 |
 | **화이트보드** | Fabric.js v6 | Canvas 기반 협업 도구, JSON 직렬화로 실시간 동기화 |
 | **Worker Pool** | 2 개 Worker | CPU 2vCPU 기준 최적 밸런스 (테스트 결과 기반) |
 
@@ -129,19 +129,19 @@ if (screenShare) {
 - Loadero 부하 테스트 결과, 참가자 수 증가 시 **Jitter 가 비선형적으로 증가**
 - 예상: 10 명 → 30 명 (3 배) 시 Jitter 도 3 배 증가
 - 실제: Jitter 가 1.4 배만 증가 (예상보다 낮음)
-- CPU 사용률은 99% 도달했지만 네트워크는 434Mbps (한계치 미달)
+- CPU 사용률은 99% 도달했지만 네트워크는 434 Mbps (한계치 미달)
 
 #### 원인 (Root Cause)
 - **이중 병목 구조**: 네트워크 병목이 CPU 병목을 가리는 현상
 - CPU 가 99% 도달하여 추가 스트림 처리 불가 → 네트워크 대역폭 미활용
 - AWS t3.small (2vCPU, 2GB) 사양이 미디어 서버 기준 부족
-- mediasoup Worker 가 싱글 스레드로 동작 → CPU 코어 1 개만 집중 사용
+- Mediasoup Worker 가 싱글 스레드로 동작 → CPU 코어 1 개만 집중 사용
 
 **발견 과정**:
 
 1. Loadero 클라우드 테스트 도구로 10/20/30 명 시나리오 실행
 2. `mediasoup.getStats()` API 로 서버 메트릭 수집
-3. v8-profiler 로 CPU 프로파일링 수행
+3. v8-profiler-next 로 CPU 프로파일링 수행
 4. 클라이언트 `chrome://webrtc-internals` 에서 RTCPeerConnection 통계 분석
 
 #### 해결 (Solution)
@@ -171,7 +171,7 @@ function getNextWorker() {
 #### 결과 (Result)
 - Worker Pool 2 개 → 4 개 확장 시 **동시 접속 100 명 달성**
 - CPU 사용률 분산 (각 Worker 50% 이하 유지)
-- 네트워크 대역폭 활용도 상승 (434Mbps → 650Mbps)
+- 네트워크 대역폭 활용도 상승 (434 Mbps → 650 Mbps)
 - **학습**: 단일 병목 가정의 위험성, 계층별 병목 분석 필요성 (네트워크 → CPU → 메모리)
 
 > **구현 현황 메모 (2026-06 코드 검증)**: Worker 수는 `os.cpus().length`(prod) 기반이 맞으나, Worker 선택은 위 예시의 라운드로빈이 아니라 Router 수가 가장 적은 Worker 를 고르는 Least-Connection 방식으로 구현되어 있다(`getNextWorker`는 deprecated 라운드로빈 인덱스 대신 least-loaded 로직에 위임).
@@ -187,7 +187,7 @@ function getNextWorker() {
 
 #### 원인 (Root Cause)
 - 초기 설계: 신규 참가자 입장 시 **모든 기존 Producer 를 한 번에 Subscribe**
-- Socket.IO 이벤트가 동기적으로 처리되어 메인 스레드 블로킹
+- Socket.io 이벤트가 동기적으로 처리되어 메인 스레드 블로킹
 - 각 Consumer 생성 시 `await transport.consume()` 호출 → 네트워크 I/O 대기
 - 브라우저 Canvas 렌더링 루프와 충돌하여 화면 프리징
 

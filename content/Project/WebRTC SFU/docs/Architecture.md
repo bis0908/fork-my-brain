@@ -131,7 +131,7 @@ MediasoupManager 는 6 개의 하위 Manager 로 분할됩니다:
 
 | Manager | 책임 |
 |---------|------|
-| **WorkerPoolManager** | Worker 풀 생성 및 라운드 로빈 할당 |
+| **WorkerPoolManager** | Worker Pool 생성 및 라운드로빈 할당 |
 | **RouterManager** | Room 별 Router 생성/조회/삭제 |
 | **TransportManager** | Transport 생성/연결/종료 |
 | **ProducerManager** | Producer 생성/일시정지/재개/종료 |

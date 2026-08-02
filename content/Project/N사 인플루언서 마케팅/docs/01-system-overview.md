@@ -198,7 +198,7 @@ renamailer/
 ## 7. 환경 설정
 | 변수 | 용도 |
 |------|------|
-| `BLOG_SECRET_API_URL` | BlogSecret API 로드밸런서 URL |
+| `BLOG_SECRET_API_URL` | BlogSecret API Load Balancer URL |
 | `USE_PARALLEL_API` | 병렬 처리 활성화 여부 |
 | `MAX_CONCURRENT_REQUESTS` | 동시 요청 제한 (기본값: 10) |
 | `MAIL_HOSTINFO` | SMTP 호스트 |
